@@ -1,0 +1,37 @@
+version: '2'
+services:
+ nextcloud:
+  build: ../nextcloud
+  image: mcsaky/nextcloud
+  ports:
+   - 80
+  expose:
+   - "80/tcp"
+  environment:
+   - MYSQL_DBNAME=sysopown
+   - MYSQL_DBPASS=owncloud
+   - MYSQL_DBUSER=sysopown
+   - ADMIN=sysop
+   - ADMINPASS=sysop
+  cpu_shares: 50
+  cpuset: 0,1
+  mem_limit: 1024m
+  depends_on:
+   - mysqldb
+  links:
+   - mysqldb
+ mysqldb:
+#  build: ../sysop-mysql
+  container_name: mysql
+  image: mcsaky/sysop-mysql
+  ports:
+   - 3306:3306
+  environment:
+   - MYSQL_ROOT_PASSWORD=sysop
+   - MYSQL_DBNAME=sysopown
+   - MYSQL_DBPASS=owncloud
+   - MYSQL_DBUSER=sysopown
+   - CREATE_DATABASE=true
+  cpu_shares: 50
+  cpuset: 0,1
+  mem_limit: 1024m
