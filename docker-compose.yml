@@ -32,6 +32,6 @@ services:
    - MYSQL_DBPASS=owncloud
    - MYSQL_DBUSER=sysopown
    - CREATE_DATABASE=true
-  cpu_shares: 50
-  cpuset: 0,1
-  mem_limit: 1024m
+#  cpu_shares: 50
+#  cpuset: 0,1
+#  mem_limit: 1024m
