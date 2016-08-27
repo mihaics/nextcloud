@@ -29,8 +29,8 @@ RUN             apk add nginx php-fpm \
 RUN		rm -rf /var/cache/apk/*
 
 # add owncloud
-ADD 	https://download.nextcloud.com/server/releases/nextcloud-9.0.50.zip /tmp/
-RUN	unzip -qq /tmp/nextcloud-9.0.50.zip -d /
+ADD 	https://download.nextcloud.com/server/releases/nextcloud-10.0.0.zip /tmp/
+RUN	unzip -qq /tmp/nextcloud-10.0.0.zip -d /
 
 # add contacts, calander and documents app
 ADD	https://github.com/owncloud/contacts/releases/download/v1.1.0.0/contacts.tar.gz /tmp/
