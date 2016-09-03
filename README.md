@@ -1,4 +1,6 @@
-# NextCloud Docker Container
+# NextCloud Docker Container  
+[![](https://images.microbadger.com/badges/image/mcsaky/nextcloud.svg)](https://microbadger.com/images/mcsaky/nextcloud "Get your own image badge on microbadger.com")
+
 All you need to build a docker container of NextCloud.
 This container is based on aphine and contains the NextCloud apps contacts, documents and calendar.
 Also there is no tls/ssl support. For transport encryption you should use a separate
@@ -46,3 +48,4 @@ like the following to the start.sh:
     $ocdir/occ app:enable calendar
 
 Now rebuild the image.
+
