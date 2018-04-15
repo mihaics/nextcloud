@@ -85,4 +85,4 @@ set_rights.sh ${ocdir}
 # go RUN!
 php-fpm7
 nginx &
-tail -f $ocdir/data/owncloud.log
+tail -f $ocdir/data/nextcloud.log
