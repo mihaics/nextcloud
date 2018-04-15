@@ -29,7 +29,7 @@ RUN	unzip -qq /tmp/latest.zip -d /
 
 
 # add owncloud dependencies
-RUN             apk add nginx php7-fpm \
+RUN             apk add sudo nginx php7-fpm \
 	php7-ctype php7-dom php7-gd \
 	php7-iconv php7-json php7-xml \
 	php7-posix php7-xmlreader \
