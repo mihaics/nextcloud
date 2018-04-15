@@ -32,9 +32,9 @@ do
 done
 echo -e "\nmysql ready"
 # enable default apps
-$ocdir/occ app:enable documents
-$ocdir/occ app:enable contacts
-$ocdir/occ app:enable calendar
+#$ocdir/occ app:enable documents
+#$ocdir/occ app:enable contacts
+#$ocdir/occ app:enable calendar
 $ocdir/occ app:enable files_external
 fi
 
@@ -83,6 +83,6 @@ fi
 set_rights.sh ${ocdir}
 
 # go RUN!
-php-fpm
+php-fpm7
 nginx &
 tail -f $ocdir/data/owncloud.log
