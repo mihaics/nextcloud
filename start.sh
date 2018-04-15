@@ -82,6 +82,8 @@ fi
 # fix rights for productivity
 set_rights.sh ${ocdir}
 
+mkdir -p /run/nginx
+
 # go RUN!
 php-fpm7
 nginx &
