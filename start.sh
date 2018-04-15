@@ -41,41 +41,41 @@ fi
 
 if [ -n "$OVERWRITEHOST" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set overwritehost --value=$OVERWRITEHOST
+  sudo -u nginx php7 $ocdir/occ config:system:set overwritehost --value=$OVERWRITEHOST
 fi
 
 if [ -n "$OVERWRITEPROTOCOL" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set overwriteprotocol --value=$OVERWRITEPROTOCOL
+  sudo -u nginx  php7 $ocdir/occ config:system:set overwriteprotocol --value=$OVERWRITEPROTOCOL
 fi
 
 if [ -n "$WEB_ROOT" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set overwritewebroot --value=$WEB_ROOT
+  sudo -u nginx  php7 $ocdir/occ config:system:set overwritewebroot --value=$WEB_ROOT
 fi
 
 if [ -n "$OVERWRITECONDADDR" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set overwritecondaddr --value=$OVERWRITECONDADDR
+  sudo -u nginx  php7 $ocdir/occ config:system:set overwritecondaddr --value=$OVERWRITECONDADDR
 fi
 
 
 if [ -n "$TRUSTED_DOMAIN1" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set trusted_domains 1 --value=$TRUSTED_DOMAIN1
+  sudo -u nginx php7 $ocdir/occ config:system:set trusted_domains 1 --value=$TRUSTED_DOMAIN1
 fi
 
 
 
 if [ -n "$TRUSTED_DOMAIN2" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set trusted_domains 2 --value=$TRUSTED_DOMAIN2
+  sudo -u nginx php7 $ocdir/occ config:system:set trusted_domains 2 --value=$TRUSTED_DOMAIN2
 fi
 
 
 if [ -n "$EXTERNAL_DOMAIN" ]
 then
-  sudo -u nginx $ocdir/occ config:system:set overwrite.cli.url --value=$EXTERNAL_DOMAIN
+  sudo -u nginx php7 $ocdir/occ config:system:set overwrite.cli.url --value=$EXTERNAL_DOMAIN
 fi
 
 
