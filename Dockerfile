@@ -49,14 +49,14 @@ RUN	rm /tmp/*
 
 # fix rights
 WORKDIR /nextcloud/
-RUN 	chown -R root:nginx ./
+RUN 	chown -R nginx:nginx ./
 #RUN 	chown -R nginx:nginx ./tmp
 RUN 	chown -R nginx:nginx ./config; chmod 755 occ
 
 # add nginx config
 ADD	nginx.conf /etc/nginx/
-ADD	php-fpm.conf /etc/php/
-ADD	php.ini	/etc/php/
+ADD	php-fpm.conf /etc/php7/
+ADD	php.ini	/etc/php7/
 
 # add some script
 ADD start.sh /usr/bin/
