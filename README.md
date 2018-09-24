@@ -49,3 +49,4 @@ like the following to the start.sh:
 
 Now rebuild the image.
 
+Testing upgrade withouth modifications
