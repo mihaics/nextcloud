@@ -19,8 +19,8 @@ then
 
 else
   # run install
-until  php  $ocdir/occ  maintenance:install --database "${DBTYPE:-mysql}" \
-                                       --database-name "${MYSQL_DBNAME:-owncloud}" \
+until  php7  $ocdir/occ  maintenance:install --database "${DBTYPE:-mysql}" \
+                                       --database-name "${MYSQL_DBNAME:-nextcloud}" \
                                        --database-host "${MYSQL_DBHOST:-mysqldb}" \
                                        --database-user "${MYSQL_DBUSER:-root}" \
                                        --database-pass "${MYSQL_DBPASS:-password}" \
