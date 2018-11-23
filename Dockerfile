@@ -14,7 +14,7 @@ ENV ADMINPASS password
 RUN		apk update && apk upgrade
 RUN		apk add bash unzip
 
-# add owncloud
+# add owncloud 23.11.2018
 ADD 	https://download.nextcloud.com/server/releases/latest.zip /tmp/
 RUN	unzip -qq /tmp/latest.zip -d /
 
